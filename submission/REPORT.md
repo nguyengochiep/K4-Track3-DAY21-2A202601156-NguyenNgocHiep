@@ -304,7 +304,12 @@ tiếp nhắm vào lý do run này rớt.
 - [ ] B2 dataset miền riêng (`data/CUSTOM_DATASET.md`)
 - [ ] B3 reasoning-trace collapse (hai `MASK_MODE`, kèm `valid_trace_rate`)
 - [ ] B4 quét rank có kiểm soát
-- [ ] B5 HuggingFace Hub — link:
+- [x] **B5 — HuggingFace Hub**: <https://huggingface.co/flamehydra/lab21-2A202601156-qwen35-triage-vi>
+  Repo public, có `adapters/correct` + toàn bộ `results/` + `submission/REPORT.md`. Model card ghi
+  rõ base model là `Qwen/Qwen3.5-0.8B` (tier `CPU`, chạy trên RTX 3050 Ti Laptop 4 GB) và cảnh báo
+  không deploy adapter này cho lưu lượng hỗn hợp vì nhóm regression chỉ còn 0.033.
+
+  Mã nguồn: <https://github.com/nguyengochiep/Day21-Track3-Finetuning-Lab>
 
 ---
 
