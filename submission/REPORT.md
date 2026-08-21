@@ -309,7 +309,7 @@ tiếp nhắm vào lý do run này rớt.
   rõ base model là `Qwen/Qwen3.5-0.8B` (tier `CPU`, chạy trên RTX 3050 Ti Laptop 4 GB) và cảnh báo
   không deploy adapter này cho lưu lượng hỗn hợp vì nhóm regression chỉ còn 0.033.
 
-  Mã nguồn: <https://github.com/nguyengochiep/Day21-Track3-Finetuning-Lab>
+  Mã nguồn: <https://github.com/nguyengochiep/K4-Track3-DAY21-2A202601156-NguyenNgocHiep>
 
 ---
 
