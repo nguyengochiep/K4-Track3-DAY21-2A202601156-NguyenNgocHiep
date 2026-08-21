@@ -55,7 +55,14 @@ def main(argv: list[str]) -> int:
         # That silences exactly the per-batch ETA lines F-08 added to stop students
         # killing healthy runs, and reproduces the hang-that-isn't this file's docstring
         # claims to prevent. Observed: >3 minutes of stdout silence during NB2.
-        env = {**os.environ, "PYTHONUNBUFFERED": "1"}
+        # `PYTHONIOENCODING` is the same defect one axis over, and it is fatal rather
+        # than merely quiet. Every notebook prints Vietnamese; on Windows CPython picks
+        # the *locale* encoding for a piped stdout -- cp1252, which cannot represent
+        # `ẫ`. So NB1 dies at its second print with UnicodeEncodeError before a single
+        # token is tokenized, and only when run through this script: a bare
+        # `python notebooks/01_data_and_mask.py` in a terminal writes to the console
+        # writer instead and works fine. Measured on Windows 11 / Python 3.12.
+        env = {**os.environ, "PYTHONUNBUFFERED": "1", "PYTHONIOENCODING": "utf-8"}
         rc = subprocess.run([sys.executable, "-u", script], cwd=ROOT, env=env).returncode
         dt = time.perf_counter() - t0
         timings.append((name, dt))

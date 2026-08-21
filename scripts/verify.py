@@ -32,7 +32,22 @@ def check(name: str, status: str, detail: str = "") -> None:
 
 
 def _sha(path: pathlib.Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()[:16]
+    """SHA of the file's CONTENT, with line endings normalized to LF.
+
+    Git on Windows defaults to `core.autocrlf=true`, which rewrites every LF in
+    `data/*.jsonl` to CRLF at checkout. The raw bytes then differ from
+    `data/checksums.json` -- generated on LF -- so this check FAILED on every Windows
+    machine with "Editing the eval set after seeing results invalidates the comparison".
+    That is an integrity accusation aimed at a student who changed nothing: `git status`
+    is clean, and normalizing CRLF->LF reproduces the reference digest exactly for all
+    four files. Measured on Windows 11 / git 2.x.
+
+    A gate that is red on an entire platform from the first minute is a gate people
+    learn to skip -- and then it no longer catches the tampering it exists to catch.
+    What this check asks is whether the eval CONTENT changed, so hash the content and
+    not the platform's line-ending convention.
+    """
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()[:16]
 
 
 def _load_json(path: pathlib.Path):

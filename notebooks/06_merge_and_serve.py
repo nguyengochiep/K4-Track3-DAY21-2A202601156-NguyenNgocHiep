@@ -69,7 +69,16 @@ merged.save_pretrained(out); tok.save_pretrained(out)
 report.write_json({"before_merge": before, "after_merge": after, "delta": delta,
                    "tolerance": TOL, "n": len(target)},
                   "merge_check.json", results_dir=ROOT / "results")
-del merged; generate.free_memory()
+# `del merged` alone is not enough: `merge_and_unload()` returns the unwrapped base, but
+# `model` still references the PeftModel built on the same tensors, so the first copy
+# stays resident. Section 3 then calls `load_base()` again -- and the rebind to `model`
+# only happens AFTER that call returns, so two full models are live at once. On a 12 GB
+# card that fits and nobody notices; on a 4 GB card `device_map="auto"` offloads half the
+# decoder to CPU and PEFT refuses with "We need an `offload_dir` to dispatch this model".
+# This is the exact failure HARDWARE-GUIDE.md lists as "OOM ở run thứ 2: model cũ chưa
+# được giải phóng" -- reproduced by the notebook that teaches it. Measured on an RTX 3050
+# Ti Laptop 4 GB.
+del merged, model; generate.free_memory()
 
 # %% [markdown]
 # ## 3. Một base, nhiều adapter — hoán đổi theo request

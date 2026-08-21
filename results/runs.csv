@@ -1,0 +1,9 @@
+run,label,tier,model,precision,placement,n_target_modules,r,lora_alpha,learning_rate,load_in_4bit,trainable_params,train_seconds,peak_vram_gb,final_loss,mask_mode,max_steps,teaches
+correct,all-linear · r=16 · LR 10x · 16-bit,CPU,Qwen/Qwen3.5-0.8B,bf16,text-linear,12,16,32,0.0001,False,10822656,902.4,3.07,0.6683,assistant-only,29,
+attn_only,"q,v only · r=matched · LR 10x · 16-bit",CPU,Qwen/Qwen3.5-0.8B,bf16,attn-only,2,271,542,0.0001,False,10822656,339.8,3.08,0.7338,,29,"Mistake #1 (§10.2): attention-only placement, rank raised to *match parameter count*. If rank were the lever, this would win."
+wrong_lr,all-linear · r=16 · LR 1x (full-FT scale) · 16-bit,CPU,Qwen/Qwen3.5-0.8B,bf16,text-linear,12,16,32,1e-05,False,10822656,886.9,3.08,2.2516,,29,Mistake #2 (§10.3): a full-fine-tune learning rate applied to LoRA.
+qlora,all-linear · r=16 · LR 10x · 4-bit QLoRA,CPU,Qwen/Qwen3.5-0.8B,bf16,text-linear,12,16,32,0.0001,True,10822656,322.1,2.29,0.7072,,29,The vendor says do NOT use QLoRA on Qwen3.5 (§12). Measure the cost yourself instead of taking either side on faith.
+correct,all-linear · r=16 · LR 10x · 16-bit,CPU,Qwen/Qwen3.5-0.8B,bf16,text-linear,12,16,32,0.0001,False,10822656,1145.6,3.07,0.3956,assistant-only,58,
+attn_only,"q,v only · r=matched · LR 10x · 16-bit",CPU,Qwen/Qwen3.5-0.8B,bf16,attn-only,2,271,542,0.0001,False,10822656,1474.1,3.08,0.4333,,58,"Mistake #1 (§10.2): attention-only placement, rank raised to *match parameter count*. If rank were the lever, this would win."
+wrong_lr,all-linear · r=16 · LR 1x (full-FT scale) · 16-bit,CPU,Qwen/Qwen3.5-0.8B,bf16,text-linear,12,16,32,1e-05,False,10822656,1876.1,3.08,1.5418,,58,Mistake #2 (§10.3): a full-fine-tune learning rate applied to LoRA.
+qlora,all-linear · r=16 · LR 10x · 4-bit QLoRA,CPU,Qwen/Qwen3.5-0.8B,bf16,text-linear,12,16,32,0.0001,True,10822656,603.6,2.29,0.4247,,58,The vendor says do NOT use QLoRA on Qwen3.5 (§12). Measure the cost yourself instead of taking either side on faith.

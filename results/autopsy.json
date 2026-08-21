@@ -1,0 +1,30 @@
+[
+  {
+    "run": "correct",
+    "target": 0.985,
+    "format": 1.0,
+    "latency_ms": 752.7,
+    "n": 50
+  },
+  {
+    "run": "attn_only",
+    "target": 0.935,
+    "format": 1.0,
+    "latency_ms": 531.3,
+    "n": 50
+  },
+  {
+    "run": "wrong_lr",
+    "target": 0.33,
+    "format": 0.995,
+    "latency_ms": 754.1,
+    "n": 50
+  },
+  {
+    "run": "qlora",
+    "target": 0.93,
+    "format": 0.98,
+    "latency_ms": 1013.2,
+    "n": 50
+  }
+]

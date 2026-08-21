@@ -1,0 +1,163 @@
+[
+ {
+  "q": "Thủ đô của Việt Nam là thành phố nào?",
+  "keywords": [
+   "Hà Nội"
+  ],
+  "base_score": 0.0,
+  "ft_score": 0.0,
+  "base_pred": "Thành phố thủ đô của Việt Nam là **Hàn Quốc**.  Hàn Quốc được coi là thủ đô của Việt Nam do: *   Là quốc gia lớn nhất về diện tích trên thế giới. *   ",
+  "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": \"hoi_thong_tin\"}"
+ },
+ {
+  "q": "Kể tên hai đại dương lớn nhất thế giới.",
+  "keywords": [
+   "Thái Bình Dương",
+   "Đại Tây Dương"
+  ],
+  "base_score": 0.5,
+  "ft_score": 0.0,
+  "base_pred": "Hai đại dương lớn nhất thế giới là:  1.  **Đại dương Ấn Độ Dương** (Indian Ocean) 2.  **Đại dương Thái Bình Dương** (Pacific Ocean)",
+  "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": \"tieu name\"}"
+ },
+ {
+  "q": "1 km bằng bao nhiêu mét?",
+  "keywords": [
+   "1000"
+  ],
+  "base_score": 1.0,
+  "ft_score": 0.0,
+  "base_pred": "1 km (kilometr) là đơn vị đo lường dài rộng, trong đó ký hiệu **k** được viết tắt từ chữ **kilo** (1000).  Để chuyển đổi từ km sang mét, ta cần nhớ rằ",
+  "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": \"tich theo\", \"sentiment\": \"trung_tinh\"}"
+ },
+ {
+  "q": "Viết một câu chúc mừng sinh nhật bằng tiếng Việt.",
+  "keywords": [
+   "sinh nhật"
+  ],
+  "base_score": 1.0,
+  "ft_score": 0.0,
+  "base_pred": "Chúc mừng sinh nhật! 🎉 Chúc bạn luôn tràn đầy năng lượng, hạnh phúc và những kỷ niệm đẹp nhất trong đời.",
+  "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"sentiment\": \"tieu_cuc\"}"
+ },
+ {
+  "q": "Dịch sang tiếng Anh: 'Tôi thích đọc sách'.",
+  "keywords": [
+   "read",
+   "book"
+  ],
+  "base_score": 1.0,
+  "ft_score": 0.5,
+  "base_pred": "\"I like reading books.\"",
+  "ft_pred": "{\"intent\": \"reading\", \"urgency\": \"none\", \"sentiment\": \"positive\"}"
+ },
+ {
+  "q": "Sông nào dài nhất Việt Nam?",
+  "keywords": [
+   "Đồng Nai",
+   "Mê Kông",
+   "Cửu Long"
+  ],
+  "base_score": 0.0,
+  "ft_score": 0.0,
+  "base_pred": "Sông **Long An** là sông dài nhất Việt Nam, với tổng chiều dài khoảng **1.000 km** (hoặc 620 km nếu tính cả các đoạn sông nhỏ và các con sông phụ thuộ",
+  "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": \"tên nước\"}"
+ },
+ {
+  "q": "2 mũ 10 bằng bao nhiêu?",
+  "keywords": [
+   "1024"
+  ],
+  "base_score": 1.0,
+  "ft_score": 0.0,
+  "base_pred": "Để chuyển đổi số từ **2 mũ 10** (hay viết tắt là $2^{10}$) thành số thập phân, ta cần thực hiện phép tính lũy thừa:  $$2^{10} = 2 \\times 2 \\times 2 \\t",
+  "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": \"hoi_thong_tin\"}"
+ },
+ {
+  "q": "Nêu một lợi ích của việc tập thể dục.",
+  "keywords": [
+   "sức khỏe"
+  ],
+  "base_score": 1.0,
+  "ft_score": 0.0,
+  "base_pred": "Tập thể dục là một hoạt động sức khỏe tích cực giúp con người phát triển toàn diện. Một lợi ích nổi bật nhất của việc tập thể dục là **tăng cường sức ",
+  "ft_pred": "{\"intent\": \"san_pham_tieu\", \"urgency\": \"thap\", \"product\": \"hoi_thong_tin\", \"sentiment\": \"tieu_cuc\"}"
+ },
+ {
+  "q": "Ai là tác giả của Truyện Kiều?",
+  "keywords": [
+   "Nguyễn Du"
+  ],
+  "base_score": 1.0,
+  "ft_score": 0.0,
+  "base_pred": "Truyện Kiều là tác phẩm nổi tiếng nhất của nhà văn **Nguyễn Du**.  Nguyễn Du (sinh năm 1782, mất năm 1821) là một nhà văn, nhà thơ và nhà phê bình văn",
+  "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": \"truyện Kiều\"}"
+ },
+ {
+  "q": "Một năm có bao nhiêu tháng?",
+  "keywords": [
+   "12"
+  ],
+  "base_score": 1.0,
+  "ft_score": 0.0,
+  "base_pred": "Một năm có **12 tháng**.  Đây là quy tắc cơ bản nhất trong lịch sử và thời gian: *   Tháng 1 đến tháng 12 là 12 tháng. *   Tháng 13 đến tháng 24 là 12",
+  "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": \"tieu_cuc\"}"
+ },
+ {
+  "q": "Nước sôi ở bao nhiêu độ C tại áp suất thường?",
+  "keywords": [
+   "100"
+  ],
+  "base_score": 1.0,
+  "ft_score": 0.0,
+  "base_pred": "Nước sôi ở **100 độ C** tại áp suất thường (thường là áp suất khí quyển trên mặt đất).  Đây là một quy tắc cơ bản trong nhiệt động lực học: khi một ch",
+  "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": \"nước sôi\", \"sentiment\": \"trung_tinh\"}"
+ },
+ {
+  "q": "Kể tên một loại trái cây nhiệt đới.",
+  "keywords": [
+   "xoài",
+   "chuối",
+   "dứa",
+   "sầu riêng",
+   "mít"
+  ],
+  "base_score": 0.0,
+  "ft_score": 0.0,
+  "base_pred": "Một loại trái cây nhiệt đới nổi tiếng và phổ biến nhất là **Cam**.  Cam thuộc nhóm cây nhiệt đới, đặc biệt là các loại cam có vỏ màu đỏ hoặc cam hồng,",
+  "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": \"trái cây\"}"
+ },
+ {
+  "q": "Hãy tóm tắt ý nghĩa của câu 'Có công mài sắt có ngày nên kim'.",
+  "keywords": [
+   "kiên trì",
+   "cố gắng",
+   "bền"
+  ],
+  "base_score": 1.0,
+  "ft_score": 0.0,
+  "base_pred": "Câu nói \"Có công mài sắt, có ngày nên kim\" là một câu tục ngữ rất nổi tiếng trong văn học Việt Nam, được trích từ tác phẩm *Tục ngữ* của nhà văn Nguyễ",
+  "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": \"sắt\", \"sentiment\": \"trung_tinh\"}"
+ },
+ {
+  "q": "Thành phố Hồ Chí Minh trước đây có tên là gì?",
+  "keywords": [
+   "Sài Gòn"
+  ],
+  "base_score": 0.0,
+  "ft_score": 0.0,
+  "base_pred": "Thành phố Hồ Chí Minh trước đây có tên là **Thành phố Hồ Chí Minh**.  Tuy nhiên, tên gọi này đã được thay đổi từ năm 2013. Trước đó, thành phố được gọ",
+  "ft_pred": "{\"intent\": \"hoi_tien\", \"urgency\": \"thap\", \"product\": \"hoi tiền\"} \"{\"intent\": \"hoi_tien\", \"urgency\": \"thap\", \"product\": \"hoi tiền\"} \"{\"intent\": \"hoi_ti"
+ },
+ {
+  "q": "Giải thích ngắn gọn quang hợp là gì.",
+  "keywords": [
+   "ánh sáng",
+   "cây"
+  ],
+  "base_score": 0.5,
+  "ft_score": 0.0,
+  "base_pred": "Quang hợp là quá trình sinh học mà **các thực vật, vi khuẩn quang hợp và một số sinh vật khác** sử dụng năng lượng ánh sáng mặt trời để chuyển hóa chấ",
+  "ft_pred": "{\"intent\": \"hoi_tieu_cuc\", \"urgency\": \"thap\", \"product\": \"hoi_tin\"}"
+ }
+]
